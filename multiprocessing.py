@@ -9,23 +9,23 @@ def countup(N):
 
 
 def countup_time(N):
-    start = time.time()
+    st_time = time.time()
     n = 0
     while n < N:
         n += 1
-    end = time.time()
-    total = end - start
+    end_time = time.time()
+    total_time = end_time - st_time
     print(n)
-    print(f'Время выполнения: {total}', flush=True)
+    print(f'Время выполнения: {total_time}', flush=True)
 
 
 if __name__ == '__main__':
     print('Обычный вызов функции:', flush=True)
-    countup_time(30000000)
+    countup_time(50000000)
 
     start = time.time()
     print('\nЧетыре процесса:', flush=True)
-    max_for_process = 30000000 // 4
+    max_for_process = 50000000 // 4
     process_pool = Pool(processes=4)
 
     process1 = process_pool.apply_async(countup, [max_for_process])
