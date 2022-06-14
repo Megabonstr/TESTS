@@ -22,7 +22,6 @@ def countup_time(N):
 if __name__ == '__main__':
     print('Обычный вызов функции:', flush=True)
     countup_time(30000000)
-    time.sleep(2)
 
     start = time.time()
     print('\nЧетыре процесса:', flush=True)
